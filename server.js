@@ -18,7 +18,7 @@ const server = require('./src/app')({
 })
 
 const start = async () => {
-  await server.listen({ port: PORT }, (err) => {
+  await server.listen({ port: PORT, host: '0.0.0.0' }, (err) => {
     if (err) {
       server.log.error(err)
       process.exit(1)
